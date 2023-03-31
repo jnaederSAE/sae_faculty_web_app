@@ -1,0 +1,24 @@
+.options_bar {
+  background-color: rgb(173, 173, 173);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.student_table {
+  margin: 20px auto;
+  border-collapse: collapse;
+}
+
+.student_table tr:nth-child(even) {
+  background-color: #dadada;
+}
+
+.student_table table,
+th,
+td {
+  border: 1px solid black;
+  padding: 5px 50px;
+}
