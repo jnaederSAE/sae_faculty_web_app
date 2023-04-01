@@ -1,8 +1,7 @@
 export default function HomePage() {
   return (
-    <>
-      <h1>Home Page</h1>
-      <p>Some stuff</p>
-    </>
+    <div>
+      <h1>Welcome to Faculty Web App!</h1>
+    </div>
   );
 }

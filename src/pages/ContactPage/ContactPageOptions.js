@@ -3,7 +3,7 @@ export default function ContactPage({ courses, setCurrentCourse }) {
   return (
     <>
       <div className="options_bar">
-        <div>
+        <div className="options_section">
           <label htmlFor="course_filter">Course Filter</label>
           <select
             name="course_filter"
@@ -15,13 +15,13 @@ export default function ContactPage({ courses, setCurrentCourse }) {
             ))}
           </select>
         </div>
-        <div>
+        <div className="options_section">
           <label htmlFor="absent_filter">Is Absent</label>
           <input type="checkbox" name="absent_filter" />
         </div>
-        <div>
-          <label htmlFor="date_filter">Date Filter</label>
-          <div>
+        <div className="options_section_date">
+          <label>Date Filter</label>
+          <div className="date_filter">
             <div>
               <label htmlFor="start_date">Start Date</label>
               <input type="date" name="start_date" />

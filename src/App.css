@@ -4,3 +4,19 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
 }
+
+button {
+  background-color: rgba(255, 255, 255, 0);
+  border: solid white 2px;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  padding: 2px 30px;
+  transition: all 0.1s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.1s ease-in-out;
+}

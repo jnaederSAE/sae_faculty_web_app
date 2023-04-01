@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { clearAll } from "../../slices/authSlice";
 import { clearProfile } from "../../slices/profileSlice";
 
-export default function NavBar() {
+export default function NavBar({ isLoggedIn }) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -15,6 +15,7 @@ export default function NavBar() {
   };
 
   const profile_full_name = useSelector((state) => state.profile.full_name);
+
   return (
     <>
       <div className="navbar_header">
@@ -40,7 +41,9 @@ export default function NavBar() {
         <hr />
         <div className="navbar_bottom_half">
           <button onClick={() => navigate("/")}>Home</button>
-          <button onClick={() => navigate("/contact")}>Contact</button>
+          {isLoggedIn ? (
+            <button onClick={() => navigate("/contact")}>Contact</button>
+          ) : null}
         </div>
       </div>
     </>
