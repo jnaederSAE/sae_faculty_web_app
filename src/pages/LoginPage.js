@@ -1,3 +1,5 @@
+import { CircularProgress, Box, Typography } from "@mui/material";
+
 import queryString from "query-string";
 import { nanoid } from "nanoid";
 import env from "react-dotenv";
@@ -23,4 +25,21 @@ export default function LoginPage() {
   };
 
   window.location = buildAuthUrl();
+  return (
+    <>
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          marginTop: 20,
+        }}
+      >
+        <Typography variant="h6" marginBottom={5}>
+          Logging you in...
+        </Typography>
+        <CircularProgress size={"10vh"} />
+      </Box>
+    </>
+  );
 }

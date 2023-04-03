@@ -5,7 +5,7 @@ window.env = {
   "asl.log": "Destination=file",
   "ChocolateyInstall": "C:\\ProgramData\\chocolatey",
   "ChocolateyLastPathUpdate": "132856559232064768",
-  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_11004_NBTYRIELCDBMHEAN",
+  "CHROME_CRASHPAD_PIPE_NAME": "\\\\.\\pipe\\LOCAL\\crashpad_21040_EMUPHPYCIQPMMSWH",
   "CLIENT_ID": "b1c4fff0-ab29-013b-489a-0a2a66f43f1b134419",
   "COLOR": "1",
   "COLORTERM": "truecolor",

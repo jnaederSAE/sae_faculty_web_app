@@ -18,6 +18,6 @@ export default function AuthPage() {
     dispatch(setProfile(profile));
     dispatch(setAccessToken(access_token));
     dispatch(setIdToken(id_token));
-    navigate("/");
+    navigate("/contact");
   });
 }

@@ -1,38 +1,42 @@
+import {
+  Box,
+  AppBar,
+  Toolbar,
+  Typography,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  Switch,
+} from "@mui/material";
+import { DatePicker } from "@mui/x-date-pickers/DatePicker";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+
 export default function ContactPage({ courses, setCurrentCourse }) {
   const allCourses = [...courses];
+
   return (
     <>
-      <div className="options_bar">
-        <div className="options_section">
-          <label htmlFor="course_filter">Course Filter</label>
-          <select
-            name="course_filter"
-            onChange={(e) => setCurrentCourse(e.target.value)}
-          >
-            <option value="all">All</option>
-            {allCourses.map((course, i) => (
-              <option key={i}>{course}</option>
-            ))}
-          </select>
-        </div>
-        <div className="options_section">
-          <label htmlFor="absent_filter">Is Absent</label>
-          <input type="checkbox" name="absent_filter" />
-        </div>
-        <div className="options_section_date">
-          <label>Date Filter</label>
-          <div className="date_filter">
-            <div>
-              <label htmlFor="start_date">Start Date</label>
-              <input type="date" name="start_date" />
-            </div>
-            <div>
-              <label htmlFor="end_date">End Date</label>
-              <input type="date" name="end_date" />
-            </div>
-          </div>
-        </div>
-      </div>
+      <Box>
+        <AppBar position="static" color="secondary">
+          <Toolbar>
+            <Typography>Course Select</Typography>
+            <Select sx={{ color: "white", margin: 2, width: "25%" }}>
+              {allCourses.map((course, i) => (
+                <MenuItem key={i} value={course}>
+                  {course}
+                </MenuItem>
+              ))}
+            </Select>
+            <Typography>Is Absent</Typography>
+            <Switch />
+          </Toolbar>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+            <DatePicker sx={{ color: "white" }} />
+          </LocalizationProvider>
+        </AppBar>
+      </Box>
     </>
   );
 }
