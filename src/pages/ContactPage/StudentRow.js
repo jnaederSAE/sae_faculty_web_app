@@ -1,4 +1,4 @@
-export default function StudentRow({ student, openModal }) {
+export default function StudentRow({ student }) {
   return (
     <>
       <tr>
@@ -7,18 +7,16 @@ export default function StudentRow({ student, openModal }) {
         </td>
         <td>{student.class}</td>
         <td>
-          <button onClick={() => openModal("SMS", student)}>SMS</button>
+          <button>SMS</button>
         </td>
         <td>
-          <button onClick={() => openModal("Email", student)}>Email</button>
+          <button>Email</button>
         </td>
         <td>
-          <button onClick={() => openModal("Canvas", student)}>Canvas</button>
+          <button>Canvas</button>
         </td>
         <td>
-          <button onClick={() => openModal("Activity", student)}>
-            Activity
-          </button>
+          <button>Activity</button>
         </td>
       </tr>
     </>
